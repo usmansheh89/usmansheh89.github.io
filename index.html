@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ur">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>عثمان کی Personal Website</title>
+
+    <style>
+
+        /* =========================
+           Basic Style
+        ========================= */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: lightblue;
+            color: black;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            transition: 0.4s;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        h2 {
+            color: green;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           Navigation Bar
+        ========================= */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 20px;
+            margin-bottom: 40px;
+
+            border-radius: 15px;
+
+            background-color: #111;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .navbar h2 {
+            margin: 0;
+            color: lightgreen;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+
+            margin: 0 8px;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: lightgreen;
+        }
+
+        .nav-links {
+    gap: 5px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 7px 8px;
+  }
+     .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.nav-links a:active {
+    transform: scale(0.92);
+}
+
+        /* =========================
+           Sections
+        ========================= */
+
+        section {
+            margin-bottom: 70px;
+
+            animation:
+                fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           Profile Image
+        ========================= */
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 4px solid white;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.3);
+        }
+
+
+        /* =========================
+           Buttons
+        ========================= */
+
+        button {
+            background-color: blue;
+            color: white;
+
+            border: none;
+
+            padding: 12px 20px;
+
+            margin: 6px;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.3);
+        }
+
+
+        /* =========================
+           Skills
+        ========================= */
+
+        .skill-card {
+            display: inline-block;
+
+            background-color: white;
+            color: black;
+
+            padding: 20px;
+
+            margin: 10px;
+
+            border-radius: 15px;
+
+            font-size: 18px;
+
+            box-shadow:
+                0 4px 10px rgba(0,0,0,0.2);
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+       }
+
+       .skill-card:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+        /* =========================
+           Skill Information Card
+        ========================= */
+
+        #skillInfo {
+
+            margin: 20px auto;
+
+            padding: 20px;
+
+            max-width: 400px;
+
+            background-color: white;
+
+            color: black;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.2);
+
+            font-size: 18px;
+
+            min-height: 20px;
+        }
+            .skill-card {
+    transition: transform 0.10s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+        /* =========================
+           Contact Form
+        ========================= */
+
+        form {
+            max-width: 400px;
+
+            margin: auto;
+        }
+
+        input,
+        textarea {
+
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding: 14px;
+
+            margin: 8px 0;
+
+            border: none;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 120px;
+
+            resize: vertical;
+        }
+
+        #result {
+     margin: 20px auto;
+     padding: 15px;
+     max-width: 400px;
+     background-color: white;
+     color: green;
+     border-radius: 12px;
+     font-size: 18px;
+     font-weight: bold;
+     text-align: center;
+     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+   }
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           Top Buttons
+        ========================= */
+
+        .top-buttons {
+            margin-top: 15px;
+
+            text-align: center;
+        }
+
+        .top-buttons button {
+            margin: 5px;
+        }
+
+
+        /* =========================
+           Social Media
+        ========================= */
+
+        #social button {
+
+            margin: 8px;
+
+            padding: 12px 20px;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+        }
+   
+        .social-links button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-links button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.social-links button:active {
+    transform: scale(0.94);
+}
+
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+
+            margin-top: 80px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            background-color: #111;
+
+            color: white;
+
+            border-radius: 15px;
+        }
+
+
+        /* =========================
+           DARK MODE
+        ========================= */
+
+        .dark {
+
+            background-color: #222;
+
+            color: white;
+        }
+
+        .dark h1 {
+            color: lightblue;
+        }
+
+        .dark h2,
+        .dark h3 {
+            color: lightgreen;
+        }
+
+        .dark p {
+            color: white;
+        }
+
+        .dark input,
+        .dark textarea {
+
+            background-color: #333;
+
+            color: white;
+        }
+
+        .dark input::placeholder,
+        .dark textarea::placeholder {
+
+            color: #ccc;
+        }
+
+        .dark button {
+
+            background-color: blue;
+
+            color: white;
+        }
+
+        .dark .skill-card {
+
+            background-color: #333;
+
+            color: white;
+        }
+
+        .dark #skillInfo {
+
+            background-color: #333;
+
+            color: white;
+        }
+
+        .dark footer {
+
+            background-color: #000;
+
+            color: white;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+            .navbar h2 {
+                font-size: 22px;
+            }
+
+            .nav-links a {
+
+                margin: 0 5px;
+
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .profile-img {
+
+                width: 180px;
+
+                height: 180px;
+            }
+
+            .skill-card {
+
+                display: block;
+
+                width: 80%;
+
+                margin: 10px auto;
+            }
+
+            form {
+
+                width: 90%;
+
+                margin: auto;
+            }
+
+            #social button {
+
+                margin: 5px;
+
+                padding: 10px 14px;
+
+                font-size: 14px;
+            }
+
+        }
+
+       #skillMessage {
+    background: white;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 18px;
+    color: #222;
+    min-height: 20px;
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         Navigation
+    ========================= -->
+
+    <nav class="navbar">
+
+        <h2>عثمان</h2>
+
+        <div class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HOME
+    ========================= -->
+
+    <section id="home">
+
+        <h1>السلام علیکم!</h1>
+
+        <p>
+            میری Personal Website میں خوش آمدید۔
+        </p>
+
+        <p>
+            یہ میری پہلی Website ہے۔
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+        <h2>میرا تعارف</h2>
+
+        <img
+            src="images/myphoto.png"
+            alt="میری تصویر"
+            class="profile-img">
+
+        <p>
+            میرا نام عثمان ہے۔
+        </p>
+
+        <p>
+            میں Coding سیکھ رہا ہوں
+            اور موبائل سے Web Design کر رہا ہوں۔
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+       <section id="skills">
+
+        <h2>میری Skills</h2>
+
+
+        <button
+            class="skill-card"
+            onclick="showSkill('Python')">
+
+            🐍 Python
+
+        </button>
+
+
+        <button
+            class="skill-card"
+            onclick="showSkill('HTML')">
+
+            🌐 HTML
+
+        </button>
+
+
+        <button
+            class="skill-card"
+            onclick="showSkill('CSS')">
+
+            🎨 CSS
+
+        </button>
+
+
+        <button
+            class="skill-card"
+            onclick="showSkill('JavaScript')">
+
+            ⚡ JavaScript
+
+        </button>
+
+
+        <div id="skillInfo"></div>
+
+    </section>          
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+        <h2>رابطہ کریں</h2>
+
+
+        <form
+            onsubmit="sendMessage(event)">
+
+
+            <input
+                type="text"
+                id="name"
+                placeholder="اپنا نام لکھیں"
+                required>
+
+
+            <input
+                type="email"
+                id="email"
+                placeholder="اپنا Email لکھیں"
+                required>
+
+
+            <textarea
+                id="message"
+                placeholder="اپنا Message لکھیں"
+                required></textarea>
+
+
+            <button type="submit">
+
+                📩 Send
+
+            </button>
+
+        </form>
+
+
+        <!-- Click + Dark Mode -->
+
+        <div class="top-buttons">
+
+            <button onclick="showMessage()">
+
+                Click Me
+
+            </button>
+
+
+            <button
+                onclick="toggleDarkMode()">
+
+                🌙 Dark Mode
+
+            </button>
+
+        </div>
+
+
+        <p id="message"></p>
+
+        <p id="result"></p>
+
+
+    </section>
+
+
+    <!-- =========================
+         SOCIAL MEDIA
+    ========================= -->
+
+     <section id="social">
+
+    <h2>مجھے Follow کریں</h2>
+
+    <div class="social-links">
+
+        <a
+            href="https://wa.me/923096818697"
+            target="_blank"
+            rel="noopener noreferrer">
+            <button>💬 WhatsApp</button>
+        </a>
+
+        <a
+            href="https://www.instagram.com/YOUR_USERNAME/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <button>📷 Instagram</button>
+        </a>
+
+        <a
+            href="https://www.facebook.com/YOUR_USERNAME/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <button>👍 Facebook</button>
+        </a>
+
+    </div>
+
+</section>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 عثمان |
+            میری Personal Website
+        </p>
+
+        <p>
+            💻 Coding سیکھ رہا ہوں
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+
+        /* =========================
+           Dark Mode
+        ========================= */
+
+        function toggleDarkMode() {
+
+            document.body.classList.toggle("dark");
+
+
+            if (
+                document.body.classList.contains("dark")
+            ) {
+
+                localStorage.setItem(
+                    "darkMode",
+                    "on"
+                );
+
+            }
+
+            else {
+
+                localStorage.setItem(
+                    "darkMode",
+                    "off"
+                );
+
+            }
+
+        }
+
+
+        /* Dark Mode دوبارہ کھولنے پر */
+
+        if (
+            localStorage.getItem("darkMode")
+            === "on"
+        ) {
+
+            document.body.classList.add("dark");
+
+        }
+
+
+        /* =========================
+           Click Me
+        ========================= */
+
+        function showMessage() {
+
+            document.getElementById("message")
+                .innerText =
+                "🎉 السلام علیکم عثمان! آپ نے Button دبایا۔";
+
+        }
+
+
+        /* =========================
+           Skills
+        ========================= */
+
+        function showSkill(skill) {
+
+            let info = "";
+
+
+            if (skill === "Python") {
+
+                info =
+                "🐍 Python Programming سیکھنے کے لیے بہترین زبان ہے۔";
+
+            }
+
+
+            else if (skill === "HTML") {
+
+                info =
+                "🌐 HTML ویب سائٹ کا Structure بنانے کے لیے استعمال ہوتا ہے۔";
+
+            }
+
+
+            else if (skill === "CSS") {
+
+                info =
+                "🎨 CSS ویب سائٹ کو خوبصورت بنانے کے لیے استعمال ہوتی ہے۔";
+
+            }
+
+
+            else if (skill === "JavaScript") {
+
+                info =
+                "⚡ JavaScript ویب سائٹ کو Interactive بناتی ہے۔";
+
+            }
+
+
+            document.getElementById("skillInfo")
+                .innerText = info;
+
+        }
+
+
+        /* =========================
+           Contact Form
+        ========================= */
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+
+            let name =
+                document.getElementById("name").value;
+
+
+            document.getElementById("result")
+                .innerText =
+                "✅ شکریہ " +
+                name +
+                "! آپ کا Message تیار ہے۔";
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
